@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="pE3-ya-Mfa">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Brochures Collection View Controller-->
+        <scene sceneID="W6u-GO-JYG">
+            <objects>
+                <collectionViewController id="pE3-ya-Mfa" customClass="BrochuresCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="opc-ci-v8b">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.98929029240192345" blue="0.77572382048190447" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="46z-wg-Nvc">
+                            <size key="itemSize" width="150" height="190"/>
+                            <size key="headerReferenceSize" width="50" height="69"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="15" minY="0.0" maxX="15" maxY="5"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BrochuresCollectionViewCell" id="xLK-ka-KAF" customClass="BrochuresCollectionViewCell">
+                                <rect key="frame" x="15" y="69" width="150" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="190"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8e4-C6-L0v">
+                                            <rect key="frame" x="8" y="8" width="134" height="102"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retailer name" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcA-Nf-tmG">
+                                            <rect key="frame" x="22.5" y="125" width="105" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuw-f0-hR9">
+                                            <rect key="frame" x="58" y="151" width="34" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="bcA-Nf-tmG" firstAttribute="centerX" secondItem="xLK-ka-KAF" secondAttribute="centerX" id="PkB-fJ-r54"/>
+                                    <constraint firstItem="Yuw-f0-hR9" firstAttribute="top" secondItem="bcA-Nf-tmG" secondAttribute="bottom" constant="5" id="V55-JZ-2QX"/>
+                                    <constraint firstItem="bcA-Nf-tmG" firstAttribute="top" secondItem="8e4-C6-L0v" secondAttribute="bottom" constant="15" id="dHR-ai-1PO"/>
+                                    <constraint firstItem="8e4-C6-L0v" firstAttribute="leading" secondItem="xLK-ka-KAF" secondAttribute="leading" constant="8" id="eAK-rC-xLF"/>
+                                    <constraint firstItem="Yuw-f0-hR9" firstAttribute="centerX" secondItem="xLK-ka-KAF" secondAttribute="centerX" id="hdY-n7-PZZ"/>
+                                    <constraint firstItem="8e4-C6-L0v" firstAttribute="top" secondItem="xLK-ka-KAF" secondAttribute="top" constant="8" id="pJY-6W-F57"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Yuw-f0-hR9" secondAttribute="bottom" constant="10" id="qtm-BR-9WK"/>
+                                    <constraint firstAttribute="trailing" secondItem="8e4-C6-L0v" secondAttribute="trailing" constant="8" id="wRU-3S-tvE"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="brochureImageView" destination="8e4-C6-L0v" id="aM4-wn-ReE"/>
+                                    <outlet property="retailerNameLabel" destination="bcA-Nf-tmG" id="GQN-Xp-qcO"/>
+                                    <outlet property="titleLabel" destination="Yuw-f0-hR9" id="uqu-rD-iq1"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BrochuresHeaderCollectionReusableView" id="D5m-rI-V4e" customClass="BrochuresHeaderCollectionReusableView">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="69"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sector name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDG-cb-KF5">
+                                    <rect key="frame" x="89" y="11" width="98" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Ss-8X-u7I">
+                                    <rect key="frame" x="8" y="11" width="65" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="BXh-1L-pfB"/>
+                                        <constraint firstAttribute="width" constant="65" id="PrL-DV-Rs3"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of brochures" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8A-fb-NDY">
+                                    <rect key="frame" x="89" y="40" width="164" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="oDG-cb-KF5" firstAttribute="top" secondItem="D5m-rI-V4e" secondAttribute="top" constant="11" id="1E9-Tn-YoH"/>
+                                <constraint firstItem="3Ss-8X-u7I" firstAttribute="leading" secondItem="D5m-rI-V4e" secondAttribute="leading" constant="8" id="1fK-z2-EuH"/>
+                                <constraint firstItem="oDG-cb-KF5" firstAttribute="leading" secondItem="3Ss-8X-u7I" secondAttribute="trailing" constant="16" id="B1r-zM-Z6e"/>
+                                <constraint firstItem="3Ss-8X-u7I" firstAttribute="top" secondItem="D5m-rI-V4e" secondAttribute="top" constant="11" id="STE-tO-e7R"/>
+                                <constraint firstItem="X8A-fb-NDY" firstAttribute="top" secondItem="oDG-cb-KF5" secondAttribute="bottom" constant="8" id="TaY-Ab-X5W"/>
+                                <constraint firstItem="X8A-fb-NDY" firstAttribute="leading" secondItem="oDG-cb-KF5" secondAttribute="leading" id="iFO-oy-Rii"/>
+                                <constraint firstAttribute="bottom" secondItem="3Ss-8X-u7I" secondAttribute="bottom" constant="8" id="x5E-3V-TQa"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="headerLabel" destination="oDG-cb-KF5" id="ned-ZA-q65"/>
+                                <outlet property="numberOfBrochuresLabel" destination="X8A-fb-NDY" id="52a-Y6-7R8"/>
+                                <outlet property="sectorImage" destination="3Ss-8X-u7I" id="FKE-aF-bBH"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="pE3-ya-Mfa" id="UZv-hH-p32"/>
+                            <outlet property="delegate" destination="pE3-ya-Mfa" id="bfX-jt-Pyq"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gko-5h-EpO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072" y="357"/>
+        </scene>
+    </scenes>
+</document>
